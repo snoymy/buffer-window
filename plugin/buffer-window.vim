@@ -28,4 +28,4 @@ augroup END
 
 hi def link WhidHeader      Number
 hi def link WhidSubHeader   Identifier
-hi BufferWindowColor           guifg=#FFFFFF   guibg=#353534   
+hi BufferWindowColor           guifg=fg   guibg=bg
