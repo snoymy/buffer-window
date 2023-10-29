@@ -58,10 +58,8 @@ local function CreateWindow()
     win = api.nvim_open_win(buf, true, opts)
     api.nvim_command('au BufWipeout <buffer> exe "silent bwipeout! "'..border_buf)
 
-    api.nvim_win_set_option(win, 'cursorline', true) -- it highlight line with the cursor on it
+    api.nvim_win_set_option(win, 'cursorline', true)
 
-    -- we can add title already here, because first line will never change
-    -- api.nvim_buf_set_lines(buf, 0, -1, false, { center('Buffer Window'), '', ''})
     api.nvim_buf_add_highlight(buf, -1, 'BufferWindowColor', 0, 0, -1)
     for i=1, win_height+2 do
         api.nvim_buf_add_highlight(border_buf, -1, 'BufferWindowColor', i-1, 0, -1)
